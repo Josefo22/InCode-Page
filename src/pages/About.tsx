@@ -33,8 +33,7 @@ const About: React.FC = () => {
                         <img
                             src={img1}
                             alt="Logo"
-                            className="h-12 w-auto transition-all duration-500 transform hover:scale-105"
-                         alt="Team" className="rounded-lg shadow-lg animate__animated animate__fadeIn animate__delay-2s"/>
+                            className="rounded-lg shadow-lg animate__animated animate__fadeIn animate__delay-2s"/>
                     </div>
                 </div>
             </section>
