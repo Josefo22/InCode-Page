@@ -1,0 +1,196 @@
+/* src/index.css */
+
+/* Estas son las directivas de Tailwind para importar su configuración */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos generales */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: black; /* Fondo gris cálido claro */
+    color: black; /* Texto en gris oscuro */
+    margin: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 0;
+}
+
+
+
+a {
+    text-decoration: none;
+    color: inherit; /* Color del texto del enlace sigue el color del texto del contenedor */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif; /* Fuente para los títulos */
+    color: #1f2937; /* Títulos en gris oscuro */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navbar */
+nav {
+    background-color: #1e40af; /* Azul oscuro */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.navbar-link {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+    .navbar-link::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 2px;
+        background-color: #60a5fa; /* Azul claro */
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.3s ease;
+    }
+
+    .navbar-link:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
+/* Main Content */
+main {
+    padding: 2rem;
+    background-color: black; /* Fondo blanco para el contenido */
+    flex-grow: 1;
+    border-radius: 8px; /* Bordes suaves */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+    main h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #1f2937;
+        margin-bottom: 1rem;
+    }
+
+    main p {
+        font-size: 1.125rem;
+        color: #4b5563; /* Gris medio para el texto */
+        line-height: 1.75;
+        margin-bottom: 1.5rem;
+    }
+
+/* Footer */
+footer {
+    background-color: #2563eb; /* Azul vibrante */
+    color: white;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+    footer img {
+        height: 50px; /* Tamaño del logo */
+        width: auto;
+    }
+
+    footer .hover\:text-gray-300:hover {
+        color: #d1d5db; /* Gris claro al pasar el ratón sobre los enlaces */
+    }
+
+    footer .text-sm {
+        font-size: 0.875rem; /* Tamaño de fuente pequeño */
+        color: rgba(255, 255, 255, 0.7); /* Gris claro para el texto */
+    }
+
+/* Animación del indicador de desplazamiento */
+.animate-bounce {
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px); /* Rebote */
+    }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    nav .navbar-link {
+        font-size: 1.1rem;
+    }
+
+    footer .flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .space-x-6 {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    main {
+        padding: 1.5rem;
+    }
+}
+
+/* Menú móvil */
+.lg:hidden {
+    display: block;
+    padding: 1rem 0;
+    background-color: #2563eb; /* Azul del menú móvil */
+    border-radius: 8px;
+}
+
+    .lg:hidden ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    .lg:hidden li {
+        margin-bottom: 1.5rem;
+    }
+
+    .lg:hidden a {
+        text-transform: uppercase;
+        font-weight: 600;
+        color: white;
+        transition: color 0.3s ease-in-out;
+    }
+
+        .lg:hidden a:hover {
+            color: #10b981; /* Verde brillante */
+        }
+
+/* Personalizar el scrollbar para todos los elementos */
+::-webkit-scrollbar {
+    width: 8px; /* Ancho de la barra de desplazamiento */
+    height: 8px; /* Altura de la barra horizontal */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #4A90E2; /* Color del "thumb" (parte que se arrastra) */
+    border-radius: 10px; /* Bordes redondeados */
+    border: 2px solid #ffffff; /* Borde blanco alrededor del thumb */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Color del track (fondo del scrollbar) */
+    border-radius: 10px; /* Bordes redondeados del track */
+}
+
+::-webkit-scrollbar-corner {
+    background-color: #f1f1f1; /* Color de la esquina donde se cruzan los scrollbars */
+}

@@ -1,0 +1,18 @@
+{
+  "ExpandedNodes": [
+<<<<<<< HEAD
+    "",
+    "\\public",
+    "\\src",
+    "\\src\\assets",
+    "\\src\\components",
+    "\\src\\pages"
+  ],
+  "SelectedNode": "\\src\\pages\\Home.tsx",
+=======
+    ""
+  ],
+  "SelectedNode": "\\C:\\Users\\ASUS\\Source\\Repos\\incode-website",
+>>>>>>> 57dcc1e8f8babbf62c4db09025190fb867fcb8ce
+  "PreviewInSolutionExplorer": false
+}
